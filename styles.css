@@ -1,0 +1,138 @@
+/* Pun Intended Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #f5f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #5d62ff;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.punny {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-style: italic;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.joke-container {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(93, 98, 255, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.joke-container:hover {
+    transform: translateY(-5px);
+}
+
+#joke-text {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#punchline {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5d62ff;
+}
+
+#new-joke-btn {
+    background-color: #5d62ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-family: 'Comic Neue', cursive;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(93, 98, 255, 0.3);
+}
+
+#new-joke-btn:hover {
+    background-color: #4a4ef5;
+    transform: scale(1.05);
+}
+
+#new-joke-btn:active {
+    transform: scale(0.98);
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.joke-container {
+    animation: fadeIn 0.8s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .joke-container {
+        padding: 1.5rem;
+    }
+    
+    #joke-text, #punchline {
+        font-size: 1.3rem;
+    }
+}
